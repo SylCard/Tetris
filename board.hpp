@@ -22,13 +22,14 @@ private:
   bool board[20][12];
 
 public:
+  Board();
   void storePiece(bool block[][4],int curX, int curY);
   void draw();
   void print();
   bool isBoardCollision(bool block[][4],int curX,int curY);
   bool hasReachedTop();
   void reset();
-  int score = 0 ;
+  int score ;
 };
 
 #endif /* board_hpp */

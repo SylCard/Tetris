@@ -7,6 +7,41 @@
 //
 #include "tetrimino.hpp"
 
+
+Tetrimino::Tetrimino(){
+  this->shapes = {
+        { {0, 0, 0, 0},
+      {0, 1, 1, 0},
+      {0, 1, 1, 0},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {1, 1, 1, 1},
+      {0, 0, 0, 0},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {0, 0, 1, 1},
+      {0, 1, 1, 0},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {0, 1, 1, 0},
+      {0, 0, 1, 1},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {0, 1, 1, 1},
+      {0, 1, 0, 0},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {0, 1, 1, 1},
+      {0, 0, 0, 1},
+      {0, 0, 0, 0}},
+      {{0, 0, 0, 0},
+      {0, 1, 1, 1},
+      {0, 0, 1, 0},
+      {0, 0, 0, 0}}
+    };
+
+}
+
 void Tetrimino::reset(int x, int y){
   //draw game board
   board.draw();
@@ -19,7 +54,6 @@ void Tetrimino::reset(int x, int y){
   srand(time(0));
     // if the game has just begun, lets initialise the next Piece
   if (level == 0 ) {
-
     int dump1 = rand() % 7;
     int dump2 = rand() % 7;
     int shape = rand() % 7;

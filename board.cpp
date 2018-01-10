@@ -8,6 +8,10 @@
 
 #include "board.hpp"
 
+Board::Board(){
+  this->score  = 0;
+}
+
 void Board::draw(){
   for (int i = 0; i < 20; i++) {
     for (int j = 0; j < 12; j++) {
